@@ -1,0 +1,150 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.q-field__native {
+  padding-top: 0 !important;
+}
+
+.required .q-field__label:before {
+  content: '* ';
+  color: #f00;
+}
+
+.q-field--float .q-field__label {
+  transform: translateY(-120%) translateX(-5px) scale(0.75);
+  background: #fff;
+  right: inherit;
+  padding: 0 5px;
+  z-index: 10;
+}
+
+.q-field--dense.q-field--float .q-field__label {
+  transform: translateY(-85%) translateX(-5px) scale(0.75);
+}
+
+.q-field--dense .q-field__native:autofill+.q-field__label,
+.q-field--dense .q-field__input:autofill+.q-field__label {
+  transform: translateY(-85%) translateX(-5px) scale(0.75);
+}
+
+.q-btn--push {
+  border-radius: 3px;
+}
+
+.q-btn--push::before {
+  border-bottom: none;
+}
+
+.q-field--auto-height.q-field--dense.q-field--labeled .q-field__control-container {
+  padding-top: 0px;
+}
+
+.breadcrumb-green {
+  color: #00B85D !important;
+}
+
+.my-custom-table th {
+  color: black !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.my-custom-table td {
+  color: #6C757D;
+  font-size: 14px !important;
+  font-weight: 400;
+}
+
+.input:-internal-autofill-selected:-internal-autofill-selected {
+  background-color: -internal-light-dark(white, white) !important;
+}
+
+/* Role */
+
+.thead-sticky tr>* {
+  position: sticky;
+  opacity: 1;
+  z-index: 1;
+  background-color: #E0E0E0;
+}
+
+.thead-sticky tr:last-child>* {
+  top: 0;
+}
+
+.role-align {
+  text-align: center;
+}
+
+.role-title {
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-main-title {
+  color: black;
+  font-weight: 600;
+}
+
+.role-view-icon {
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.role-view-text {
+  color: #6C757D;
+}
+
+#role-button {
+  background-color: #00B85D !important;
+  color: white;
+}
+
+#role-title-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#role-title-2 {
+  padding-top: 1rem;
+}
+
+#role-card {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Approval */
+.approval-add {
+  background-color: #00B85D !important;
+  color: white;
+}
+
+#approval-space-left {
+  padding-left: 1rem !important;
+}
+
+#approval-title {
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+#approval-sub-title {
+  color: grey;
+  font-size: 12px;
+}
+
+#approval-tb {
+  background-color: #F8F9FA;
+}
+
+#approval-th {
+  width: 10%;
+  font-weight: 600;
+}
