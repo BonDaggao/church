@@ -4,7 +4,8 @@
       <div class="menu">
         <main>
           <div class="logo-container">
-            <img src="/5Logo.png" alt="Logo" class="logo" />
+            <!-- Use q-img for the logo -->
+            <q-img src="/5Logo.png" alt="Logo" class="logo" />
           </div>
           <div class="info">
             <h1>CAMPER CAFE</h1>
@@ -16,12 +17,16 @@
         </main>
       </div>
     </body>
-    <p>Welcome to our website!</p>
+    <q-page>
+      <q-page-sticky>
+        <p>Welcome to our website!</p>
+      </q-page-sticky>
+    </q-page>
   </div>
 </template>
 
 <style>
- .menu {
+.menu {
   text-align: center;
   border-radius: 25px;
   height: 20em;
