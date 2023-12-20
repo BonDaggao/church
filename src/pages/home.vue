@@ -16,12 +16,15 @@
           </div>
         </main>
       </div>
+      <div class="p">
+        <p>Welcome to our website!</p>
+      </div>
     </body>
-    <q-page>
+    <!-- <q-page>
       <q-page-sticky>
         <p>Welcome to our website!</p>
       </q-page-sticky>
-    </q-page>
+    </q-page> -->
   </div>
 </template>
 
@@ -51,7 +54,10 @@
   align-items: center;
 }
 
-p {
+.p {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
   text-align: center;
 }
 </style>
