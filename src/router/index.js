@@ -27,7 +27,7 @@ const router = createRouter({
             children: [
               // Users Maintenance Route
               {
-                path: '/home',
+                path: '/',
                 name: 'home',
                 component: () => import('../views/HomeView.vue'),
                 meta: {
