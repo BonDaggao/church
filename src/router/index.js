@@ -27,16 +27,25 @@ const router = createRouter({
             children: [
               // Users Maintenance Route
               {
-                path: '/',
+                path: 'home',
                 name: 'home',
                 component: () => import('../views/HomeView.vue'),
                 meta: {
                   title: `Home | ${import.meta.env.VITE_FE_TITLE}`,
               },
-              // beforeEnter: middleware.user,
+            }, {
+                path: '/about',
+                name: 'about',
+                component: () => import('../views/AboutView.vue'),
+                meta: {
+                  title: `About | ${import.meta.env.VITE_FE_TITLE}`,
               },
+            }
+        
+              // beforeEnter: middleware.user,
             ],
         }
+        
 
     ]
 });

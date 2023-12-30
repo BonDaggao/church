@@ -2,19 +2,37 @@
   <q-header class="text-white" style="background-color: #ffaa2b; border-bottom: 1px solid #e0e0e0!important;">
     <q-toolbar>
       <q-btn dense flat round icon="menu" color="black" @click="toggleLeftDrawer" />
+
       <q-toolbar-title>
-          <q-img 
-              src="/img/church_icon.png" 
-              lazy-src="/img/church_icon.png"
-              height="10px"
-              style="max-width:180px; margin: 10px;"
-          />
+        <q-img 
+          src="/img/church_icon.png" 
+          lazy-src="/img/church_icon.png"
+          height="10px"
+          style="max-width:180px; margin: 10px;"
+        />
       </q-toolbar-title>
+
+      <!-- Spacing for even distribution -->
+      <q-space />
+
+      <!-- Adding links to the header -->
+      <q-btn flat dense label="HOME" @click="navigateTo('home')" />
+      <q-btn flat dense label="ABOUT" @click="navigateTo('about')" />
+      <q-btn flat dense label="BLOG" @click="navigateTo('blog')" />
+      <q-btn flat dense label="CEREMONIES" @click="navigateTo('ceremonies')" />
+      <q-btn flat dense label="DOCUMENT" @click="navigateTo('document')" />
+
+      <!-- Spacing for even distribution -->
+      <q-space />
+
       <q-icon style="color: black; font-weight: 600; font-size: 20px;" class="q-mr-xs" name="notifications"></q-icon>
+
       <q-avatar class="q-ma-md">
         <img src="https://cdn.quasar.dev/img/avatar.png">
       </q-avatar>
+
       <label style="color: black; font-weight: 600;" class="q-ma-xs">{{ store.userData.email }}</label>
+
       <q-btn-dropdown flat class="q-mr-xs" size="10px" color="white" text-color="black">
         <q-list>
           <q-item clickable v-close-popup @click="onItemClick">
@@ -46,16 +64,24 @@ const userData = ref('')
 function toggleLeftDrawer() {
   emitter.emit('toggleDrawer')
 }
+
 onMounted( async () => {
   userData.value =  await store.isAuthenticated()
 })
+
 async function logout() {
-    await store.logout()
-    // sessionStorage.clear()
-    login()
+  await store.logout()
+  login()
 }
+
 function login(){
-    const path = `/login`
-    router.push(path)
+  const path = `/login`
+  router.push(path)
+}
+
+// Navigation function for the buttons
+function navigateTo(routeName) {
+  const path = `/${routeName.toLowerCase()}`
+  router.push(path)
 }
 </script>
