@@ -15,12 +15,12 @@
       <!-- Spacing for even distribution -->
       <q-space />
 
-      <!-- Adding links to the header -->
-      <q-btn flat dense label="HOME" @click="navigateTo('home')" />
-      <q-btn flat dense label="ABOUT" @click="navigateTo('about')" />
-      <q-btn flat dense label="BLOG" @click="navigateTo('blog')" />
-      <q-btn flat dense label="CEREMONIES" @click="navigateTo('ceremonies')" />
-      <q-btn flat dense label="DOCUMENT" @click="navigateTo('document')" />
+      <!-- Adding links to the header with spacing -->
+      <q-btn flat dense label="HOME" @click="navigateTo('')" class="black-text" />
+      <q-btn flat dense label="ABOUT" @click="navigateTo('about')" class="black-text" />
+      <q-btn flat dense label="BLOG" @click="navigateTo('blog')" class="black-text" />
+      <q-btn flat dense label="CEREMONIES" @click="navigateTo('ceremonies')" class="black-text" />
+      <q-btn flat dense label="DOCUMENT" @click="navigateTo('document')" class="black-text" />
 
       <!-- Spacing for even distribution -->
       <q-space />
@@ -85,3 +85,15 @@ function navigateTo(routeName) {
   router.push(path)
 }
 </script>
+
+<style scoped>
+/* Increase the font size of the buttons */
+.black-text {
+  color: black;
+  font-size: 20px; /* Adjust the font size as per your preference */
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+</style>

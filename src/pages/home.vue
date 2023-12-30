@@ -1,36 +1,31 @@
 <template>
-  <div>
-    <body>
-      <div class="menu">
-        <main>
-          <div class="logo-container">
-            <!-- Use q-img for the logo -->
-            <q-img src="/5Logo.png" alt="Logo" class="logo" />
-          </div>
-          <div class="info">
-            <h1>CAMPER CAFE</h1>
-            <p>Est. 2020</p>
-            <section>
-              <h2>Coffee</h2>
-            </section>
-          </div>
-        </main>
+  <div class="menu">
+    <main>
+      <div class="logo-info-container">
+        <!-- Logo placed beside the name -->
+        <q-img 
+          src="/img/logo.png" 
+          lazy-src="/img/logo.png"
+          height="255px"  
+          style="max-width: 290px; margin-right: 20px; border-radius: 50%;"
+        />
+        <div class="info">
+          <h3>SHRINE OF THE FIVE WOUNDS OF OUR LORD JESUS CHRIST</h3>
+          <h4>364 Real Street, Talon I, Las Pinas, 1747 Metro Manila</h4>
+        </div>
       </div>
-      <div class="p">
-        <p>Welcome to our website!</p>
-      </div>
-    </body>
-    <!-- <q-page>
-      <q-page-sticky>
-        <p>Welcome to our website!</p>
-      </q-page-sticky>
-    </q-page> -->
+    </main>
+  </div>
+  <div class="p">
+    <p>Welcome to our website!</p>
   </div>
 </template>
 
 <style>
 .menu {
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   border-radius: 25px;
   height: 20em;
   width: 90%;
@@ -39,25 +34,27 @@
   margin-top: 30px;
 }
 
-.logo-container {
-  margin-bottom: 20px; /* Adjust the margin as needed */
+.logo-info-container {
+  display: flex;
+  align-items: center; /* Align items vertically center */
 }
 
 .logo {
-  width: 100px; /* Set the width of your logo */
+  max-width: 150px; /* Set the maximum width of your logo */
   height: auto; /* Maintain aspect ratio */
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:  flex-start; /* Align content to the start (left) */
+  justify-content: center; /* Center content vertically */
+  
+  display: inline;
+  
 }
 
 .p {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   text-align: center;
 }
 </style>
