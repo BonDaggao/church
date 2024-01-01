@@ -50,10 +50,12 @@
   align-items:  flex-start; /* Align content to the start (left) */
   justify-content: center; /* Center content vertically */
   display: inline;
+  color: black;
   
 }
 
-.p, h3, h4 {
+.p {
   text-align: center;
+  color: black;
 }
 </style>
