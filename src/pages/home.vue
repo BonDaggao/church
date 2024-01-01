@@ -49,12 +49,11 @@
   flex-direction: column;
   align-items:  flex-start; /* Align content to the start (left) */
   justify-content: center; /* Center content vertically */
-  
   display: inline;
   
 }
 
-.p {
+.p, h3, h4 {
   text-align: center;
 }
 </style>
