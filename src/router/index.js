@@ -40,7 +40,14 @@ const router = createRouter({
                 meta: {
                   title: `About | ${import.meta.env.VITE_FE_TITLE}`,
               },
-            }
+            }, {
+              path: '/blog',
+              name: 'blog',
+              component: () => import('../views/BlogView.vue'),
+              meta: {
+                title: `Blog | ${import.meta.env.VITE_FE_TITLE}`,
+            },
+          },
         
               // beforeEnter: middleware.user,
             ],
