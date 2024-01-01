@@ -123,8 +123,8 @@
   }
   
   .event-card img {
-    width: 300px;
-    height: 170px;
+    width: 400px;
+    height: 250px;
     object-fit: cover;
   }
   
